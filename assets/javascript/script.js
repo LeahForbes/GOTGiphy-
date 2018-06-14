@@ -1,11 +1,12 @@
-$(document).ready(function() {
+$ (document).ready(function() {
 
-var gifCategories = ["happy baby", "sleepy baby", "angry baby", "hungry baby", "sad baby", "silly baby", "scared baby", "dancing baby", "chubby baby", "surprise baby", "walking baby", "crawling baby"];
+var gifCategories = ["Daenerys Targaryen", "Jon Snow", "Gregor Clegane", "Cersei Lannister", "Tyrion Lannister", "Arya Stark", "Khal Drogo", "Sansa Stark", "Joffrey Baratheon", "Petyr Baelish", "Sandor Clegane", "Eddard Stark", "Melisandre"];
 var apiKey = "9a7fa4fcadec44039b9827a6100853a9"
 var rating = "pg"
 var searchTerm;
 var newSearchTerm;
 var moving = false;
+
 
 for (var i = 0; i < gifCategories.length; i++) {
 	$("#buttons").append("<button class='btn btn-secondary' id='gifFilter' value='" + gifCategories[i] + "'>" + gifCategories[i] + "</button>");
@@ -45,7 +46,6 @@ if (moving === true) {
   $(this).attr("src", stillGifURL);
 }
 });
-
 
 function appendStillGifs(response){
         var gifs = response.data; // array of gifs
